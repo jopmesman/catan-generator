@@ -1,0 +1,182 @@
+@mixin mixin_calculate_rotate($times){
+    -webkit-transform: rotate(function_calculate_rotate($times));
+    -moz-transform: rotate(function_calculate_rotate($times));
+    -ms-transform: rotate(function_calculate_rotate($times));
+    -o-transform: rotate(function_calculate_rotate($times));
+    transform: rotate(function_calculate_rotate($times));
+}
+@function function_calculate_rotate($times){
+    @return $times * 60deg;
+}
+
+body{
+    #catan_field{
+        width: 960px;
+        float: left;
+
+        .field_kolom{
+            width: 80px;
+            float: left;
+            margin-left: -19px;
+
+            .catan_tile{
+                width: 80px;
+                height: 69px;
+                position: relative;
+                overflow: hidden;
+
+                .fiche{
+                    margin-top: 20px;
+                    margin-left: 30px;
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: none;
+
+                    &.fiche_2{
+                        background: url('../images/2.png');
+                    }
+
+                    &.fiche_3{
+                        background: url('../images/3.png');
+                    }
+
+                    &.fiche_4{
+                        background: url('../images/4.png');
+                    }
+
+                    &.fiche_5{
+                        background: url('../images/5.png');
+                    }
+
+                    &.fiche_6{
+                        background: url('../images/6.png');
+                    }
+
+                    &.fiche_8{
+                        background: url('../images/8.png');
+                    }
+
+                    &.fiche_9{
+                        background: url('../images/9.png');
+                    }
+
+                    &.fiche_10{
+                        background: url('../images/10.png');
+                    }
+
+                    &.fiche_11{
+                        background: url('../images/11.png');
+                    }
+
+                    &.fiche_12{
+                        background: url('../images/12.png');
+                    }
+                }
+
+                &.rotate_0{
+                    @include mixin_calculate_rotate(0);
+                }
+
+                &.rotate_1{
+                    @include mixin_calculate_rotate(1);
+                }
+
+                &.rotate_2{
+                    @include mixin_calculate_rotate(2);
+                }
+
+                &.rotate_3{
+                    @include mixin_calculate_rotate(3);
+                }
+
+                &.rotate_4{
+                    @include mixin_calculate_rotate(4);
+                }
+
+                &.rotate_5{
+                    @include mixin_calculate_rotate(5);
+                }
+
+                &.wood{
+                    background: url('../images/wood.gif');
+                }
+
+                &.sheep{
+                    background: url('../images/sheep.gif');
+                }
+
+                &.ore{
+                    background: url('../images/ore.gif');
+                }
+
+                &.corn{
+                    background: url('../images/corn.gif');
+                }
+
+                &.stone{
+                    background: url('../images/stone.gif');
+                }
+
+                &.desert{
+                    background: url('../images/desert.gif');
+                }
+
+                &.port_wood{
+                    background: url('../images/port_wood.png');
+                }
+
+                &.port_sheep{
+                    background: url('../images/port_sheep.png');
+                }
+
+                &.port_ore{
+                    background: url('../images/port_ore.png');
+                }
+
+                &.port_corn{
+                    background: url('../images/port_corn.png');
+                }
+
+                &.port_stone{
+                    background: url('../images/port_stone.png');
+                }
+
+                &.port_3_1{
+                    background: url('../images/port_3_1.png');
+                }
+
+                &.sea{
+                    background: url('../images/sea.png');
+                }
+            }
+        }
+
+        .catan_field_4_first{
+            margin-top: 100px;
+            z-index: 10;
+            margin-left: 0px;
+        }
+
+        .catan_field_5{
+            margin-top: 68px;
+            z-index: 20;
+        }
+
+        .catan_field_6{
+            margin-top: 34px;
+            z-index: 10;
+        }
+
+        .catan_field_7{
+            margin-top: 0px;
+            z-index: 20;
+        }
+
+        .catan_field_4_last{
+            margin-top: 104px;
+            z-index: 10;
+        }
+    }
+
+}
+
